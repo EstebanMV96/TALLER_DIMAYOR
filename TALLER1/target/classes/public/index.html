@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>TALLER 1-ESTEBAN MOYA</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+        
+        th {
+            background-color: #64FE2E;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="" ng-app="myapp">
+
+        <div class="" ng-controller="myctrl1">
+           
+            
+            <table class="table" style="width:100%">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Año fundado</th>
+                    <th>Títulos</th>
+                </tr>
+                <tbody id="info">
+                    <tr class="equipo_row" ng-repeat="equipo in equipos">
+                        <td>{{equipo.nombre}}</td>
+                        <td>{{equipo.anoFundacion}}</td>
+                        <td>{{equipo.numTitulos}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <button ng-click="getInfo()">Listar Equipos</button>
+        </div>
+
+
+
+    </div>
+
+    <script type="text/javascript" src="lib/angular.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers/ctrl1.js"></script>
+    <script type="text/javascript" src="js/controllers/ctrl2.js"></script>
+
+</body>
+
+</html>
